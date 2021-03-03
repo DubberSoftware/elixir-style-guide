@@ -212,7 +212,9 @@ The following section are automatically applied by the code formatter in Elixir 
 
 * <a name="camelcase-modules"></a>
   Use `CamelCase` for module names. Keep uppercase acronyms as uppercase.
+  Module names should be descriptive and as unique as possible to make code navigation easy for developers.  The `path-to` does not need to be included in the name as elixir treats the dots in a difference fashion than other languages.
   <sup>[[link](#camelcase-modules)]</sup>
+  
 
   ```elixir
   # Bad
@@ -284,7 +286,13 @@ The following section are automatically applied by the code formatter in Elixir 
   Use code comments only to communicate important details to another person reading the code.
   For example, a high-level description of the algorithm being implemented or why certain
   critical decisions, such as optimization or business rules, were made.
+  TODO's should be used to track the work a developer is currently working on and should not appear in a comment
   <sup>[[link](#critical-comments)]</sup>
+
+```elixir
+# Bad
+  #TODO: fix this up when the opportunity arrises
+```
 
 * <a name="no-superfluous-comments"></a>
   Avoid superfluous comments.
@@ -292,7 +300,7 @@ The following section are automatically applied by the code formatter in Elixir 
 
   ```elixir
   # Bad
-  String.first(input) # Get first grapheme.
+  String.first(input) # Get first grapheme.  
   ```
 
 ### Modules
